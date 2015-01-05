@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>朋友网</title>
+	<style>
+	body{
+		border-top: 2px solid  #2E3238;
+		margin: 0;
+		padding: 0;
+	}
+	.login_main{
+		width: 100%;
+		height: 452px;
+		padding-top: 28px;
+		background: url(images/1.png) repeat-x 0 0 #fff;
+		margin-top: -22px;
+		position: relative;
+	}
+	.head{
+		width: 965px;
+	}
+	.head img{
+		margin-top: 50px;
+		margin-left: 218px;
+	}
+	.bottom{
+		height: 355px;
+		width: 956px;
+		margin: 0 auto;
+	}
+	.log_left{
+		height: 332px;
+		width: 535px;
+		background: url(images/2.png);
+		position: relative;
+		top: 14px;
+		float: left; 
+	}
+	.log_right{
+		float: right;
+		width: 360px;
+		height: 322px;
+		margin-top: -10px;
+	}
+	.log span{
+		font-size: 12px;
+		color: #EF9800;
+		padding: 5px 0;
+	}
+	.log span a{
+		color: black;
+		text-decoration: none;
+	}
+	.log span a:hover{
+		text-decoration: underline;
+	}
+	.username input{
+		margin-top: 7px;
+		border-radius: 1px;
+		width: 283px;
+		height: 24px;
+		border: 1px solid #d9d9d9;
+		border-top-color:#c2c2c2;
+		padding: 7px; 
+		font-size: 14px;
+	}
+	.password input{
+		width: 283px;
+		height: 24px;
+		border-radius: 1px;
+		border:1px solid #d9d9d9;
+		border-top-color: #c2c2c2;
+		color: #a0a0a0;
+		padding: 7px;
+		font-size: 14px;
+		margin-top: 10px;
+	}
+	.log p{
+		color: #fff;
+		font-size: 20px;
+		font-weight: bold;
+		font-family: Helvetica; 
+		border:1px solid #88c999;
+		padding: 9px 0px 7px 0px;
+		width: 146px;
+		border-radius: 2px;
+		background-color: #88c932;
+		text-align: center;
+		margin-top: 12px;
+	}
+	.log_other{
+		font-size: 12px;
+		margin-top: -10px;
+	}
+	.log_other img{
+		position: relative;
+		top: 1px;
+		left: -3px; 
+	}
+	.log_other span{
+		margin-left: 5px;
+	}
+	.log_other a{
+		color: #000;
+		text-decoration: none;
+	}
+	.log_other a:hover{
+		text-decoration: underline;
+	}
+	.foot{
+		width: 965px;
+		margin: 0 auto; 
+	}
+	.download{
+		position: absolute;
+		top: 315px;
+		left: 880px;
+	}
+	.download li{
+		display: none;
+		font-size: 12px;
+		font-family: Tahoma;
+		color: #808080;
+	}
+	.download li.selected{
+		display: block;
+		text-align: center;
+	}
+	.download li a{
+		text-decoration: none;
+		color: #000;
+	}
+	.download li img{
+		width: 60px;
+		height: 77px;
+	}
+	.bullet{
+		position: absolute;
+		bottom: 15px;
+		right: 24.5%;
+	}
+	.bullet a.show{
+		background: url(images/yellow.png) no-repeat 0 0;
+		background-size: 9px 9px;
+	}
+	.bullet a{
+		background: url(images/white.png) ;
+		background-size: 9px 9px;
+		width: 9px;
+		height: 9px;
+		display: inline-block;
+		margin: 0 5px;
+		cursor: pointer;
+	}
+	.foot{
+		margin: 30px auto 0;
+	}
+	.foot p{
+		margin-top: -6px;
+		font-size: 12px;
+		height: 1.6em;
+		font-family:Tahoma; 
+		color: #bec0c0;
+		text-align: center;
+	}
+	.foot p a{
+		color: #bec0c0;
+		text-decoration:none;
+	}
+	.download li a:hover,
+	.foot p a:hover{
+		text-decoration: underline;
+	}
+	</style>
+</head>
+<body onload="autoTabStart()">
+	<div class="login_main">
+		<div class="head">
+			<img src="images/3.png"/>
+		</div>
+		<div class="bottom">
+			<div class="log_left">
+			</div>
+			<div class="log_right">
+				<div class="log">
+					<span>请输入正确的QQ账号！<a target="_blank"href="http://support.qq.com/write.shtml?guest=1&fid=713&SSTAG=10011-QQ%E5%8F%B7%E7%A0%81/%E6%89%8B%E6%9C%BA/%E9%82%AE%E7%AE%B1">意见反馈</a></span>
+					<div class="username">
+						<input type="text"placeholder="QQ号码/手机/邮箱">
+					</div>
+					<div class="password">
+						<input type="password">
+					</div>
+					<p>登录</p>
+				</div>
+				<div class="log_other">
+					<a target="_blank" href="https://aq.qq.com/cn2/findpsw/pc/pc_find_pwd_input_account?pw_type=0&aquin="><img src="images/8.png"/>忘记密码了？</a><span>|</span>
+					<a target="_blank" href="http://reg.pengyou.qq.com/emailreg.html">可用Email注册</a><span>|</span>
+					<a href="#">QQ登录快速开通</a>
+				</div>
+			</div>
+		</div>
+		<div onmouseover="autoTabStop()" onmouseout="autoTabStart()">
+		<ul class="download" id="download" >
+			<li class="selected"><a target="_blank" href="http://www.pengyou.com/frame.html?ADTAG=py_tuijian_wap&frame=http://qzonestyle.gtimg.cn/campus/html/mobile_py.html"><img src="images/4.png"/><p>手机访问f.qq.com</p></a></li>
+			<li><a target="_blank" href="http://www.pengyou.com/mobile?from=loginAndroid"><img src="images/5.png"/><p>Android客户端下载</p></a></li>
+			<li><a target="_blank" href="http://www.pengyou.com/mobile?from=loginIphone"><img src="images/6.png"/><p>iPhone客户端下载</p></a></li>
+			<li><a target="_blank" href="http://www.pengyou.com/mobile?from=loginSymbian"><img src="images/7.png"/><p>Symbian客户端下载</p></a></li>
+		</ul>
+	    <div class="bullet" id="bullet">
+            <a class="show" href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+        </div> 
+    </div>
+	</div>
+	<div class="foot">
+		<p>
+			<a target="_blank" href="http://www.qq.com/culture.shtml">粤文网【2014】0633-233 号</a>
+			增值电信业务经营许可证：
+			<a href="http://www.qq.com/icp.shtml" target="_blank">粤B2-20090059</a>
+			<a href="http://www.qq.com/icp1.shtml" target="_blank"> B2-20090028</a>|
+			<a target="_blank" href="http://www.qq.com/?pref=pengyou">腾讯网</a>|
+			<a target="_blank" href="http://www.pengyou.com/?http%3A%2F%2Fpengyou.qq.com%2Findex.php%3Fmod%3Dframe%26ADTAG%3Dpy_tuijian_wap%26width%3D1%26frame%3Dhttp%3A%2F%2Fqzonestyle.gtimg.cn%2Fcampus%2Fhtml%2Fmobile_py.html">手机朋友</a>|
+			<a target="_balnk"href="http://reg.pengyou.com/agreement_office.html">服务协议</a>|
+			<a target="_blank" href="http://support.qq.com/discuss/371_1.shtml">提建议</a>|
+			<a target="_blank" href="http://kf.qq.com/product/pengyou.html">腾讯客服</a>|
+			<a target="_blank" href="http://wiki.open.qq.com/wiki/%E6%8A%95%E8%AF%89%E6%8C%87%E5%BC%95">应用侵权投诉</a>|
+			<a href="http://wiki.open.qq.com/wiki/Tencent_Open_Platform_Complaint_Guidelines"target="_blank">Complaint Guidelines</a>
+		</p>
+		<p>Copyright &copy 2008 - 2014 Tencent.
+			<a target="_blank" href="http://www.tencent.com/zh-cn/le/copyrightstatement.shtml"> All Rights Reserved.</a> 腾讯公司 <a target="blank"href="http://www.tencent.com/zh-cn/le/copyrightstatement.shtml">版权所有</a>
+		</p>
+	</div>
+</body>
+<script src="hh.js"></script>
+</html>
